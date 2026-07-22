@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Deshboard</title>
+    <title>Technical Gyan and E-Mitra Dashboard</title>
     <style>
-        /* CSS Start */
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            background-color: #eef2f3;
         }
 
         header {
-            background-color: #4CAF50;
+            background-color: #0066cc;
             color: white;
             padding: 20px;
             text-align: center;
@@ -25,7 +24,7 @@
             position: fixed;
             top: 0;
             left: 0;
-            background-color: #333;
+            background-color: #004080;
             padding-top: 60px;
         }
 
@@ -34,10 +33,11 @@
             color: white;
             padding: 15px 20px;
             text-decoration: none;
+            font-weight: bold;
         }
 
         .sidebar a:hover {
-            background-color: #575757;
+            background-color: #0066cc;
         }
 
         .content {
@@ -46,9 +46,13 @@
             margin-top: 60px;
         }
 
+        h2 {
+            color: #333;
+        }
+
         .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
         }
 
@@ -56,7 +60,7 @@
             background-color: white;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             transition: transform 0.2s;
         }
 
@@ -64,47 +68,88 @@
             transform: translateY(-5px);
         }
 
-        h2 {
-            margin-top: 0;
-            color: #333;
+        /* Specific styles for each section */
+        .orders { background-color: #ffe0b2; }
+        .messages { background-color: #d1c4e9; }
+        .vacancies { background-color: #b2dfdb; }
+        .other { background-color: #ffcdd2; }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #004080;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: calc(100% - 250px);
+            margin-left: 250px;
         }
-
-        /* CSS End */
     </style>
 </head>
 <body>
 
 <header>
-    <h1>मेरी वेबसाइट का Dashboard</h1>
+    <h1>Technical Gyan and E-Mitra Dashboard</h1>
 </header>
 
 <div class="sidebar">
-    <a href="#">होम</a>
-    <a href="#">आपके डेटा</a>
-    <a href="#">सेटिंग्स</a>
-    <a href="#">संपर्क करें</a>
+    <a href="#orders">ऑर्डर</a>
+    <a href="#messages">संदेश</a>
+    <a href="#vacancies">वैकेंसी फॉर्म</a>
+    <a href="#others">अन्य सेक्शन</a>
 </div>
 
 <div class="content">
-    <h2>मुख्य आंकड़े</h2>
+    <h2 id="orders">ऑर्डर</h2>
     <div class="cards">
-        <div class="card">
-            <h3>उपयोगकर्ता</h3>
-            <p>1500</p>
+        <div class="card orders">
+            <h3>नई ऑर्डर</h3>
+            <p>15</p>
         </div>
-        <div class="card">
-            <h3>आदेश</h3>
-            <p>300</p>
-        </div>
-        <div class="card">
-            <h3>मुद्रा</h3>
-            <p>₹50,000</p>
-        </div>
-        <div class="card">
-            <h3>संदेश</h3>
-            <p>45</p>
+        <div class="card orders">
+            <h3>प्रसंस्कृत ऑर्डर</h3>
+            <p>40</p>
         </div>
     </div>
+
+    <h2 id="messages">संदेश</h2>
+    <div class="cards">
+        <div class="card messages">
+            <h3>नई संदेश</h3>
+            <p>25</p>
+        </div>
+        <div class="card messages">
+            <h3>प्राप्त संदेश</h3>
+            <p>120</p>
+        </div>
+    </div>
+
+    <h2 id="vacancies">वैकेंसी फॉर्म</h2>
+    <div class="cards">
+        <div class="card vacancies">
+            <h3>खाली पद</h3>
+            <p>5</p>
+        </div>
+        <div class="card vacancies">
+            <h3>आवेदन प्राप्त</h3>
+            <p>30</p>
+        </div>
+    </div>
+
+    <h2 id="others">अन्य सेक्शन</h2>
+    <div class="cards">
+        <div class="card other">
+            <h3>अपडेट्स</h3>
+            <p>अगस्त 2024 में नई सर्विस शुरू होगी</p>
+        </div>
+        <div class="card other">
+            <h3>संपर्क करें</h3>
+            <p>support@techgyan.com</p>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    &copy; 2024 Technical Gyan and E-Mitra. सभी अधिकार सुरक्षित।
 </div>
 
 </body>

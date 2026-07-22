@@ -2,11 +2,110 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8" />
-    <title>Meri Website</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deshboard</title>
+    <style>
+        /* CSS Start */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            margin-top: 60px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        /* CSS End */
+    </style>
 </head>
 <body>
-    <h1>Swagat hai!</h1>
-    <p>Yeh meri pehli website hai.</p>
+
+<header>
+    <h1>मेरी वेबसाइट का Dashboard</h1>
+</header>
+
+<div class="sidebar">
+    <a href="#">होम</a>
+    <a href="#">आपके डेटा</a>
+    <a href="#">सेटिंग्स</a>
+    <a href="#">संपर्क करें</a>
+</div>
+
+<div class="content">
+    <h2>मुख्य आंकड़े</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>उपयोगकर्ता</h3>
+            <p>1500</p>
+        </div>
+        <div class="card">
+            <h3>आदेश</h3>
+            <p>300</p>
+        </div>
+        <div class="card">
+            <h3>मुद्रा</h3>
+            <p>₹50,000</p>
+        </div>
+        <div class="card">
+            <h3>संदेश</h3>
+            <p>45</p>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
